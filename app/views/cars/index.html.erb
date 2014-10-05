@@ -1,0 +1,9 @@
+<h1>Cars On The Lot</h1>
+<%= link_to 'Add A New Car', new_car_path %><br>
+<ol>
+  <% @cars.each do |car| %>
+    <li><%= link_to "#{car.manufacturer.name} - #{car.year}", car_path(car) %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Back', :back %>

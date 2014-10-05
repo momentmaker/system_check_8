@@ -1,0 +1,9 @@
+<h1>Cars By <%= @manufacturer.name %> On Lot</h1>
+
+<ul>
+  <% @manufacturer.cars.each do |car| %>
+    <li><%= link_to car.year, car_path(car) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', root_path %>
