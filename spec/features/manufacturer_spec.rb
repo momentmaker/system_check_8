@@ -11,7 +11,7 @@ feature 'New manufacturer' do
   end
 
   scenario 'User tries to add a manufacturer already exists' do
-    let(:manufacturer) { FactoryGirl.create(:manufacturer) }
+    honda = FactoryGirl.create(:manufacturer)
     visit manufacturers_path
     click_on 'Add A New Manufacturer'
     fill_in 'Name', with: 'Honda'
